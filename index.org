@@ -1,0 +1,24 @@
+#+OPTIONS: toc:nil
+#+begin_export markdown
+---
+layout: page
+title: Notes
+menubar_toc: true
+toc_title: Table of contents
+---
+#+end_export
+* Dala's playground
+  
+  [[file:bibtex.md][bibtex]]
+  
+  Kleine test no.2
+ #+begin_src emacs-lisp :tangle yes
+
+   (let ((n 0))
+     (while (< n 10)
+       (print "hi")
+       (setq n (1+ n))))
+
+ #+end_src 
+
+ #+RESULTS:

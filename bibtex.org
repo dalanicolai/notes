@@ -1,0 +1,11 @@
+#+OPTIONS: toc:nil
+#+begin_export markdown
+---
+layout: page
+title: Notes
+menubar_toc: true
+toc_title: Table of contents
+---
+#+end_export
+* Werkt dit?
+  Dit wordt de bibtex file
