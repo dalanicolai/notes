@@ -9,17 +9,15 @@ toc_title: Table of contents
 #+end_export
 * Dala's playground
 
-  [[file:spacemacs-notes.md][Spacemacs notes (recipes)]]
-  [[file:bibtex.md][bibtex]]
+  [[file:pages/spacemacs-notes.md][Spacemacs notes (recipes)]]
+  [[file:pages/bibtex.md][bibtex]]
   
   Kleine test no.2
  #+begin_src emacs-lisp :tangle yes
-
    (let ((n 0))
      (while (< n 10)
        (print "hi")
        (setq n (1+ n))))
-
  #+end_src 
 
  #+RESULTS:

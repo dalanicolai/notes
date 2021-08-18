@@ -1,4 +1,4 @@
- - title: "Spacemacs notes (recipes)"
-    url: "sapcemacs-notes"
-  - title: "Bibtex"
-    url: "bibtex"
+- title: "Spacemacs notes (recipes)"
+  url: "pages/spacemacs-notes"
+- title: "Bibtex"
+  url: "pages/bibtex"
