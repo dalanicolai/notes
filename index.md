@@ -1,4 +1,11 @@
 ---
+title: ""
+date: 
+layout: post
+categories: 
+tags: 
+---
+---
 layout: page
 title: Notes
 menubar_toc: true
@@ -8,6 +15,7 @@ toc_title: Table of contents
 
 # Dala's playground
 
+[Spacemacs notes (recipes)](spacemacs-notes.md)
 [bibtex](bibtex.md)
 
 Kleine test no.2
