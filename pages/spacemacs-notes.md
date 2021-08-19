@@ -35,7 +35,9 @@ toc_title: Table of contents
          "200 "
          "000010000010000010000010000010000010100010011100000000000000")
  'pbm t)
+{% endhighlight %}
 
+{% highlight emacs-lisp %}
 (image-property
  (create-image
   (concat "P1 " "120 " "200 "
@@ -57,7 +59,7 @@ toc_title: Table of contents
 {% endhighlight %}
 
 
-### Create a help-echo
+### Create a help-echo over an image (part)
 
 {% highlight emacs-lisp %}
 (create-image "~/testt.png" nil nil
@@ -65,3 +67,44 @@ toc_title: Table of contents
                       hello
                       (pointer arrow help-echo "hello"))))
 {% endhighlight %}
+
+
+## Keyboard macro's
+
+
+### Reformat to columns
+
+There was the following question on Gitter:
+
+> Siva @sprasanth Aug 18 19:04 Hi! I am trying to learn how to align code in
+> spacemacs. I have similar piece of code everywhere in my file and they are all
+> messed up. How can I align them ? I would like to have State name start from
+> column 6, City name start from Column 8 and Restuarant name start from
+> Column 10.
+> 
+> California begin  
+> SanJose  
+> SanFransisco  
+> SantaCruz  
+> Restaurants begin  
+> Subway  
+> Starbucks  
+> end  
+> end
+
+As a solution I suggested to use a keyboard macro. The following macro will
+work fine after you first 'create enough space' for the rectangular blocks
+(using `(string-replace "begin" " begin")`:
+
+{% highlight emacs-lisp %}
+(fset 'to-columns
+   (kmacro-lambda-form [?m ?m ?/ ?b ?e ?g ?i ?n return
+                           ?d ?$ ?j ?0 ?\C-v ?n ?h ?d ?k ?A S-insert escape
+                           ?n ?d ?d ?\C-v ?/ ?e ?n ?d return
+                           ?k ?$ ?d ?\' ?m ?A ?
+                           ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?
+                           ?  S-insert escape ?n ?d ?d ?d ?d] 0 "%d"))
+{% endhighlight %}
+
+For it to work on a block of any form, I probably had to insert some spaces
+after *Starbucks* before selecting and deleting the rectangular block.
