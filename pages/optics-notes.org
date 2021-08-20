@@ -10,5 +10,8 @@ toc_title: Table of contents
 #+end_export
 * Paraxial optics
   Snell's law reads $n_1 \sin{\theta_1} = n_2 \sin{\theta_2}$. In the paraxial
-  regime this becomes \(n_1 \theta_1 = n_2 \theta_2\).
+  regime this becomes \(n_1 \theta_1 = n_2 \theta_2\). Also, because in the
+  paraxial regime \( \tan{\theta} = \theta \), \(\theta_1\) equals
+  \(h/d\), so that
+  \[\theta_2 = \frac{n_1 h}{n_2 d}\].
   
