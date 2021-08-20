@@ -10,6 +10,7 @@ toc_title: Table of contents
 * Dala's playground
 
   [[file:pages/spacemacs-notes.md][Spacemacs notes (recipes)]]
+  [[file:pages/optics-notes.md][Optics notes (recipes)]]
   [[file:pages/bibtex.md][bibtex]]
   
   Kleine test no.2
@@ -19,5 +20,3 @@ toc_title: Table of contents
        (print "hi")
        (setq n (1+ n))))
  #+end_src 
-
- #+RESULTS:
