@@ -2,6 +2,7 @@
 layout: page
 title: Emacs bibtex workflow
 menubar_toc: true
+usemathjax: true
 toc_title: Table of contents
 ---
 
