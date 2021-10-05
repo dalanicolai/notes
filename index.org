@@ -10,8 +10,12 @@ toc_title: Table of contents
 * Dala's playground
 
   [[file:pages/spacemacs-notes.md][Spacemacs notes (recipes)]]
-  [[file:pages/optics-notes.md][Optics notes (recipes)]]
+  
+  [[file:pages/optics-notes.md][Optics notes]]
+  
   [[file:pages/bibtex.md][bibtex]]
+  
+  [[file:pages/magit-quick-start.md][Magit quick start]]
   
   Kleine test no.2
  #+begin_src emacs-lisp :tangle yes
