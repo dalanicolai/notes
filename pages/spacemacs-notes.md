@@ -9,6 +9,65 @@ toc_title: Table of contents
 # Spacemacs notes (recipes)
 
 
+## Keyboard macro's
+
+
+### Reformat to columns
+
+There was the following question on Gitter:
+
+> Siva @sprasanth Aug 18 19:04 Hi! I am trying to learn how to align code in
+> spacemacs. I have similar piece of code everywhere in my file and they are all
+> messed up. How can I align them ? I would like to have State name start from
+> column 6, City name start from Column 8 and Restuarant name start from
+> Column 10.
+> 
+> California begin  
+> SanJose  
+> SanFransisco  
+> SantaCruz  
+> Restaurants begin  
+> Subway  
+> Starbucks  
+> end  
+> end
+
+As a solution I suggested to use a keyboard macro. The following macro will
+work fine after you first 'create enough space' for the rectangular blocks
+(using `(string-replace "begin" "    begin")`:
+
+{% highlight emacs-lisp %}
+(fset 'to-columns
+   (kmacro-lambda-form [?m ?m ?/ ?b ?e ?g ?i ?n return
+                           ?d ?$ ?j ?0 ?\C-v ?n ?h ?d ?k ?A S-insert escape
+                           ?n ?d ?d ?\C-v ?/ ?e ?n ?d return
+                           ?k ?$ ?d ?\' ?m ?A ?
+                           ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?
+                           ?  S-insert escape ?n ?d ?d ?d ?d] 0 "%d"))
+{% endhighlight %}
+
+For it to work on a block of any form, I probably had to insert some spaces
+after *Starbucks* before selecting and deleting the rectangular block.
+
+
+## Terminal (vterm)
+
+The most powerful terminal for emacs is [vterm](https://github.com/akermu/emacs-libvterm), it is great!
+
+So build Emacs [with module support](https://github.com/akermu/emacs-libvterm/issues/170) or follow [the installation instructions for
+vterm](https://github.com/akermu/emacs-libvterm#installation). Don't forget to [configure the path to your .bash-history file](https://develop.spacemacs.org/layers/+tools/shell/README.html#install-vterm) and set
+vterm as your default shell using:
+
+{% highlight emacs-lisp %}
+(shell :variables
+       shell-default-shell 'vterm
+       spacemacs-vterm-history-file-location "~/.bash_history"
+{% endhighlight %}
+
+Finally you can make a shortcut like `emacsclient -e '(vterm)'`, to use vterm by
+default instead of some less convenient terminal.
+
+
 ## Images
 
 
@@ -67,44 +126,3 @@ toc_title: Table of contents
                       hello
                       (pointer arrow help-echo "hello"))))
 {% endhighlight %}
-
-
-## Keyboard macro's
-
-
-### Reformat to columns
-
-There was the following question on Gitter:
-
-> Siva @sprasanth Aug 18 19:04 Hi! I am trying to learn how to align code in
-> spacemacs. I have similar piece of code everywhere in my file and they are all
-> messed up. How can I align them ? I would like to have State name start from
-> column 6, City name start from Column 8 and Restuarant name start from
-> Column 10.
-> 
-> California begin  
-> SanJose  
-> SanFransisco  
-> SantaCruz  
-> Restaurants begin  
-> Subway  
-> Starbucks  
-> end  
-> end
-
-As a solution I suggested to use a keyboard macro. The following macro will
-work fine after you first 'create enough space' for the rectangular blocks
-(using `(string-replace "begin" " begin")`:
-
-{% highlight emacs-lisp %}
-(fset 'to-columns
-   (kmacro-lambda-form [?m ?m ?/ ?b ?e ?g ?i ?n return
-                           ?d ?$ ?j ?0 ?\C-v ?n ?h ?d ?k ?A S-insert escape
-                           ?n ?d ?d ?\C-v ?/ ?e ?n ?d return
-                           ?k ?$ ?d ?\' ?m ?A ?
-                           ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?
-                           ?  S-insert escape ?n ?d ?d ?d ?d] 0 "%d"))
-{% endhighlight %}
-
-For it to work on a block of any form, I probably had to insert some spaces
-after *Starbucks* before selecting and deleting the rectangular block.
