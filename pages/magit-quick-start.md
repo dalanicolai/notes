@@ -15,10 +15,10 @@ A transient in emacs provides a way to
 
 # A first basic transient
 
-<div class="article" id="org9749169">
-<div class="mb" id="org3e92f8a">
+<div class="article" id="org6f64d20">
+<div class="mb" id="org9b71f0c">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">transient-define-prefix</span>  <span style="color: #bc6ec5; font-weight: bold;">tutorial-transient</span> <span style="color: #bc6ec5;">()</span>
+<pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">transient-define-prefix</span>  tutorial-transient <span style="color: #bc6ec5;">()</span>
   <span style="color: #9f8766;">"Some Emacs magic"</span>
   <span style="color: #4f97d7;">:info-manual</span> <span style="color: #2d9574;">"Surf system-test transient"</span>
   <span style="color: #bc6ec5;">[</span><span style="color: #2d9574;">"Not defined yet"</span>

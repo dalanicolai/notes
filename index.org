@@ -16,11 +16,17 @@ toc_title: Table of contents
   [[file:pages/bibtex.md][bibtex]]
   
   [[file:pages/magit-quick-start.md][Magit quick start]]
-  
-  Kleine test no.2
- #+begin_src emacs-lisp :tangle yes
-   (let ((n 0))
-     (while (< n 10)
-       (print "hi")
-       (setq n (1+ n))))
- #+end_src 
+
+* This blog
+This blog used the [[https://github.com/vsoch/mkdocs-jekyll][mkdocs-jekyll]] (remote) theme.
+
+In order to use it while writing my blogs in =org-mode=, I'm using the
+[[https://github.com/gonsie/ox-jekyll-md][ox-jekyll-md]] package. I am adding the 'yaml frontmatter manually to my org
+files' (see those files), and I have a =.dir-locals= file in the root folder of
+the repo containing the line
+#+begin_src emacs-lisp :tangle yes
+  ((org-mode . ((org-jekyll-md-include-yaml-front-matter . nil)
+                (org-jekyll-md-use-todays-date . nil)
+                (after-save-hook . org-jekyll-md-export-to-md))))
+#+end_src
+to make sure that the org-file get exported correctly on save.

@@ -10,7 +10,7 @@ toc_title: Table of contents
 
 Hello there, hello. I'm a software tester and for my work I need to run a lot of scripts many times a day.
 * Emacs transient
-  A transient in emacs provides a way to
+A transient in emacs provides a way to
   
 * A first basic transient  
 
