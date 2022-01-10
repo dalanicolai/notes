@@ -1,4 +1,12 @@
 ---
+title: ""
+date: 
+layout: post
+categories: 
+tags: 
+---
+
+---
 layout: page
 title: Notes
 menubar_toc: true
@@ -16,11 +24,20 @@ toc_title: Table of contents
 
 [Magit quick start](pages/magit-quick-start.md)
 
-Kleine test no.2
+
+# This blog
+
+This blog used the [mkdocs-jekyll](https://github.com/vsoch/mkdocs-jekyll) (remote) theme.
+
+In order to use it while writing my blogs in `org-mode`, I'm using the
+[ox-jekyll-md](https://github.com/gonsie/ox-jekyll-md) package. I am adding the 'yaml frontmatter manually to my org
+files' (see those files), and I have a `.dir-locals` file in the root folder of
+the repo containing the line
 
 {% highlight emacs-lisp %}
-(let ((n 0))
-  (while (< n 10)
-    (print "hi")
-    (setq n (1+ n))))
+((org-mode . ((org-jekyll-md-include-yaml-front-matter . nil)
+              (org-jekyll-md-use-todays-date . nil)
+              (after-save-hook . org-jekyll-md-export-to-md))))
 {% endhighlight %}
+
+to make sure that the org-file get exported correctly on save.
