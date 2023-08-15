@@ -5,7 +5,10 @@ menubar_toc: true
 toc_title: Table of contents
 ---
 
+
 # Dala's playground
+
+[Fixing org-mode coding assistance](pages/fixing-org-mode-coding-assistance.md)
 
 [Spacemacs notes (recipes)](pages/spacemacs-notes.md)
 

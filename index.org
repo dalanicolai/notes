@@ -9,13 +9,15 @@ toc_title: Table of contents
 #+end_export
 * Dala's playground
 
-  [[file:pages/spacemacs-notes.md][Spacemacs notes (recipes)]]
+[[file:pages/fixing-org-mode-coding-assistance.md][Fixing org-mode coding assistance]]
 
-  [[file:pages/optics-notes.md][Optics notes]]
+[[file:pages/spacemacs-notes.md][Spacemacs notes (recipes)]]
 
-  [[file:pages/bibtex.md][bibtex]]
+[[file:pages/optics-notes.md][Optics notes]]
 
-  [[file:pages/magit-quick-start.md][Magit quick start]]
+[[file:pages/bibtex.md][bibtex]]
+
+[[file:pages/magit-quick-start.md][Magit quick start]]
 
 * This blog
 This blog used the [[https://github.com/vsoch/mkdocs-jekyll][mkdocs-jekyll]] (remote) theme.
