@@ -1,25 +1,25 @@
 remote_theme: dalanicolai/mkdocs-jekyll
 
 
-# # Welcome to Jekyll!
-# #
-# # This config file is meant for settings that affect your whole blog, values
-# # which you are expected to set up once and rarely edit after that. If you find
-# # yourself editing these this file very often, consider using Jekyll's data files
-# # feature for the data you need to update frequently.
-# #
-# # For technical reasons, this file is *NOT* reloaded automatically when you use
-# # 'jekyll serve'. If you change this file, please restart the server process.
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# # Site settings
-# # These are used to personalize your new site. If you look in the HTML files,
-# # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# # You can create any custom variable you would like, and they will be accessible
-# # in the templates via {{ site.myvariable }}.
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 
-# title: MkDocs Documentation Jekyll
-# email: your-email@domain.com
-# author: Dinosaur Avocado
+title: Dala's playground
+email: dalanicolai@gmail.com
+author: Daniel Nicolai
 # description: > # this means to ignore newlines until "baseurl:"
 #   Write an awesome description for your new site here. You can edit this
 #   line in _config.yml. It will appear in your document head meta (for
@@ -31,9 +31,9 @@ remote_theme: dalanicolai/mkdocs-jekyll
 # url: "https://vsoch.github.io" # the base hostname & protocol for your site
 
 # # Social (First three Required)
-# repo: "https://github.com/vsoch/mkdocs-jekyll"
-# github_user: "vsoch"
-# github_repo: "mkdocs-jekyll"
+repo: "https://github.com/dalanicolai/notes"
+github_user: "dalanicolai"
+github_repo: "notes"
 
 # # Optional
 # twitter: vsoch
